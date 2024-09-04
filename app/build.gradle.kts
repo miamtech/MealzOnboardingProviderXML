@@ -39,6 +39,11 @@ android {
 }
 
 dependencies {
+    /**
+     * TODO (Step 1): Add the mealz dependency
+     * A. Add implementation
+     * https://miamtech.github.io/mealz-documentation/docs/android/overview/installation
+     */
 
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.appcompat:appcompat:1.7.0")
