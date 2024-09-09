@@ -4,6 +4,7 @@ import android.content.Context
 import ai.mealz.core.Mealz
 import ai.mealz.core.init.option
 import ai.mealz.core.init.sdkRequirement
+import ai.mealz.marmiton.config.MiamTemplateManager
 
 /**
  * TODO (Step 2): Initialization
@@ -39,5 +40,6 @@ object MealzManager {
          * TODO (Step 7): Use Custom Components
          * A. Call MiamTemplateManager
          */
+        MiamTemplateManager()
     }
 }
