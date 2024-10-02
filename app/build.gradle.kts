@@ -44,6 +44,8 @@ dependencies {
      * A. Add implementation
      * https://miamtech.github.io/mealz-documentation/docs/android/overview/installation
      */
+    implementation("ai.mealz.android:mealz-android:5.0.0")
+    implementation("ai.mealz.marmiton:marmiton")
 
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.appcompat:appcompat:1.7.0")
