@@ -8,14 +8,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import ai.mealz.mealzonboardingproviderxml.databinding.ActivityMainBinding
-
-/**
- * TODO (Step 2): Initialization
- * A. Create new file MealzManager
- * B. Add supplier key
- * C. Init the SDK
- * https://miamtech.github.io/mealz-documentation/docs/android/overview/supplierInit
- */
+import ai.mealz.mealzonboardingproviderxml.mealz.MealzManager
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,6 +21,7 @@ class MainActivity : AppCompatActivity() {
          * D. Call the init method of MealzManager
          * https://miamtech.github.io/mealz-documentation/docs/android/overview/supplierInit
          */
+        MealzManager.initialize(this)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
