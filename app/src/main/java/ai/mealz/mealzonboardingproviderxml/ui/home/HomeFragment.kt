@@ -9,8 +9,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import ai.mealz.mealzonboardingproviderxml.databinding.FragmentHomeBinding
+import ai.mealz.sdk.components.recipeDetailButton.RecipeDetailButton
 import android.widget.ImageView
-import android.widget.Toast
 import com.squareup.picasso.Picasso
 
 /**
@@ -34,6 +34,8 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        val firstRecipeId: String = "22509"
+        val secondRecipeId: String = "14472"
         val homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
@@ -48,15 +50,12 @@ class HomeFragment : Fragment() {
         val firstImageUrl = "https://hips.hearstapps.com/hmg-prod/images/delish-202102-airfryerchickenparm-184-ls-1612561654.jpg?crop=1xw:0.84375xh;center,top&resize=1200:*"
 
         val firstCtaGetPrice = firstRecipeCard.findViewById<TextView>(R.id.cta_get_price)
-        val firstCtaSeeDetails = firstRecipeCard.findViewById<TextView>(R.id.cta_see_details)
+        val firstCtaSeeDetails = firstRecipeCard.findViewById<RecipeDetailButton>(R.id.cta_see_details)
         // Set click listener for cta_get_price
         firstCtaGetPrice.setOnClickListener {
             // action
         }
-        firstCtaSeeDetails.setOnClickListener {
-            // action
-        }
-
+        firstCtaSeeDetails.bind(firstRecipeId,true)
         // Load image with Picasso
         Picasso.get()
             .load(firstImageUrl)
@@ -70,14 +69,13 @@ class HomeFragment : Fragment() {
         val secondImageUrl = "https://assets.afcdn.com/recipe/20170112/28965_w1024h768c1cx1500cy1000.webp"
 
         val secondCtaGetPrice = secondRecipeCard.findViewById<TextView>(R.id.cta_get_price)
-        val secondCtaSeeDetails = secondRecipeCard.findViewById<TextView>(R.id.cta_see_details)
+        val secondCtaSeeDetails = secondRecipeCard.findViewById<RecipeDetailButton>(R.id.cta_see_details)
+        secondCtaSeeDetails.bind(secondRecipeId, isExtId = true)
         // Set click listener for cta_get_price
         secondCtaGetPrice.setOnClickListener {
             // action
         }
-        secondCtaSeeDetails.setOnClickListener {
-            // action
-        }
+
 
         // Load image with Picasso
         Picasso.get()
