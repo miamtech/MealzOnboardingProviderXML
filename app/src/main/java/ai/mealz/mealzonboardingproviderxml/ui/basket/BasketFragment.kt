@@ -9,6 +9,14 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import ai.mealz.mealzonboardingproviderxml.databinding.FragmentBasketBinding
 
+/**
+ * TODO (Step 5): Show My Basket
+ * A. Update Basket XML to use Mealz Component
+ * B. Update BasketFragment to show MyBasket
+ * C. Recipe Details "See my basket" navigates to MyBasket
+ * https://miamtech.github.io/mealz-documentation/docs/android/features/MyBasket/Overview
+ */
+
 class BasketFragment : Fragment() {
 
     private var _binding: FragmentBasketBinding? = null
