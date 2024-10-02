@@ -50,15 +50,8 @@
                 android:textColor="#0000FF"
                 android:layout_weight="1"/>
 
-            <!-- See Details -->
-            <TextView
-                android:id="@+id/cta_see_details"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="See Details"
-                android:textColor="#0000FF"
-                android:layout_weight="1"
-                android:gravity="end"/>
+            <!-- TODO (Step 3) add recipe Detail  button -->
+
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

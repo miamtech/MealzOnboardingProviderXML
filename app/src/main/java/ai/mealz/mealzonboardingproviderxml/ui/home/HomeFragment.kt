@@ -13,6 +13,14 @@ import android.widget.ImageView
 import android.widget.Toast
 import com.squareup.picasso.Picasso
 
+/**
+ * TODO (Step 3): Open Recipe Details
+ * A. Add RecipeDetail Button to RecipeCard
+ * B. Init to  RecipeDetail Button that passes in recipe id
+ * C. Update HomeFragment to open RecipeDetails dialog when See Details button called
+ * https://miamtech.github.io/mealz-documentation/docs/android/category/recipe-cards
+ */
+
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
