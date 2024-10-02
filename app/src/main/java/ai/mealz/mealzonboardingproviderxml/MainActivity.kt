@@ -1,5 +1,6 @@
 package ai.mealz.mealzonboardingproviderxml
 
+import ai.mealz.core.Mealz
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +10,8 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import ai.mealz.mealzonboardingproviderxml.databinding.ActivityMainBinding
 import ai.mealz.mealzonboardingproviderxml.mealz.MealzManager
+import ai.mealz.mealzonboardingproviderxml.ui.storeLocator.StoreLocatorFragment
+import androidx.fragment.app.FragmentTransaction
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +25,16 @@ class MainActivity : AppCompatActivity() {
          * https://miamtech.github.io/mealz-documentation/docs/android/overview/supplierInit
          */
         MealzManager.initialize(this)
+        /**
+         * TODO (Step 4): Set Store Selector Redirect
+         * D. Update MealzManager to set redirection
+         * https://miamtech.github.io/mealz-documentation/docs/android/advanced/store-configuration#%23SetStore
+         */
+        Mealz.user.setStoreLocatorRedirection {
+            val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
+            val newFragment = StoreLocatorFragment()
+            newFragment.show(ft, "storeSelectorDialog")
+        }
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)

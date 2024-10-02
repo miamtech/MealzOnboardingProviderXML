@@ -36,13 +36,4 @@ object MealzManager {
         }
         isInitialized = true
     }
-
-    /**
-     * TODO (Step 4): Set Store Selector Redirect
-     * A. Create new XML file for Store Selector
-     * B. Create new Fragment file
-     * C. Call Webview from Marmiton Package
-     * D. Update MealzManager to set redirection
-     * https://miamtech.github.io/mealz-documentation/docs/android/advanced/store-configuration#%23SetStore
-     */
 }
