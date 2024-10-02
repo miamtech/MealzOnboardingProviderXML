@@ -35,5 +35,9 @@ object MealzManager {
             option { isAnonymousModeEnabled =  true }
         }
         isInitialized = true
+        /**
+         * TODO (Step 7): Use Custom Components
+         * A. Call MiamTemplateManager
+         */
     }
 }
